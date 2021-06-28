@@ -1,0 +1,14 @@
+@keyframes example {
+    from {color: whitesmoke;}
+    to {color: black;}
+}
+
+.heading{
+    text-align: center;
+    font-family: "Dancing Script";
+    font-size: 35px;
+    transition: width 2s;
+    color: black;
+    animation-name: example;
+    animation-duration: 4s;
+}

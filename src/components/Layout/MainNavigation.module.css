@@ -1,0 +1,85 @@
+.header {
+    background-color: aquamarine;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    max-width: 100vw;
+}
+.logoLink {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logoLink a{
+    font-family: 'Dancing Script';
+    font-size: 2.5rem;
+    margin: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    max-height: 100%;
+    width: 200px;
+}
+.rightSideContainer{
+    padding-right: 100px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 0;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 15%;
+    display: flex;
+    align-items: center;
+}
+
+.header li {
+    padding-right: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.header button {
+    text-transform: uppercase;
+    font: inherit;
+    background-color: #a2f1cb;
+    border: 1px solid white;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.header li:hover {
+    color: chocolate;
+}
+
+.header button:hover {
+    background-color: beige;
+    color: black;
+}
+
+@media (min-width: 500px) {
+    .header{
+        flex-flow: row;
+        width: 100%;
+    }
+}

@@ -1,0 +1,41 @@
+// url =
+    //   "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAQ-f2ETosOTOr2ni8nkGQqGUG2_C22zAQ";
+    //
+    // fetch(url, {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     email: enteredEmail,
+    //     password: enteredPassword,
+    //     returnSecureToken: true,
+    //   }),
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    // })
+    //   .then((res) => {
+    //     setIsLoading(false);
+    //     if (res.ok) {
+    //       console.log(res);
+    //       return res.json();
+    //     } else {
+    //       return res.json().then((data) => {
+    //         console.log(data);
+    //         let errorMessage;
+    //         if (data && data.error && data.error.message)
+    //           errorMessage = data.error.message;
+    //         throw new Error(errorMessage);
+    //       });
+    //     }
+    //   })
+    //   .then((data) => {
+    //     console.log(data);
+    //     authCtx.login(data.idToken);
+    //     localStorage.setItem("localId", data.localId);
+    //     console.log(data.localId);
+    //     history.push("/login");
+    //     const user = firebase.auth().currentUser;
+    //     console.log(user);
+    //   })
+    //   .catch((err) => {
+    //     setError(err.message);
+    //   });

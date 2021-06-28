@@ -1,0 +1,28 @@
+.starting {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.starting h1 {
+    font-size: 3rem;
+    font-family: "Dubai Light";
+}
+
+.starting button {
+    cursor: pointer;
+    font-family: "Dancing Script";
+    font-size: 2em;
+    color: black;
+    background-color: aquamarine;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.starting button:hover {
+    background-color: teal;
+    border-color: white;
+    color: white;
+}

@@ -1,0 +1,38 @@
+
+.section{
+    margin: 3rem auto;
+    width: 95%;
+    max-width: 25rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    background-color: white;
+    /*background-image: url("https://thumbs.dreamstime.com/b/beige-turquoise-blur-photo-wallpaper-vector-graphic-beige-turquoise-blur-photo-wallpaper-vector-graphic-162552795.jpg");*/
+}
+
+.section h1 {
+    text-align: center;
+    font-family: "Dancing Script";
+    color: black;
+}
+
+.section button {
+    background-color: bisque;
+    cursor: pointer;
+    font-family: "Dubai Light", serif;
+    font-size: 20px;
+    color: black;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 0.5rem 2.5rem;
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 5px;
+}
+
+.section button:hover {
+    background-color: wheat;
+    border-color: white;
+}
