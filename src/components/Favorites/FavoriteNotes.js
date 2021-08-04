@@ -117,7 +117,7 @@ const FavoriteNotes = () => {
   }, [fetchData, editDone]);
 
   const filteredNote = data.filter((note) => {
-    return note.title.toLowerCase().includes(searchText.toLowerCase());
+    return note.title?.toLowerCase().includes(searchText.toLowerCase());
   });
 
   return (
