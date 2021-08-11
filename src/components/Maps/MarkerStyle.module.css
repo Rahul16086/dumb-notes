@@ -10,9 +10,57 @@
     height: 35px;
 }
 
+.heading{
+    text-align: center;
+    font-family: "Dancing Script";
+    font-size: 50px;
+    margin: 0;
+}
+
+.note{
+    text-align: center;
+    font-size: 30px;
+}
+
 .map{
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.75);
+}
+
+.mapScale{
+    width: 90%;
+    height: 80vh;
+}
+
+.noNotes{
+    text-align: center;
+    font-family: "Dancing Script", serif;
+    font-size: 50px;
+}
+
+@media (max-width: 40rem) {
+    .mapScale{
+        max-width: 1250px;
+        width: 1200px;
+        height: 1000px;
+    }
+
+    .map{
+        width: 1250px;
+        margin: 10px;
+        height: 1000px;
+    }
+    .heading{
+        margin-left: 20rem;
+        width: 40rem;
+        font-size: 5rem;
+    }
+
+    .note{
+        font-size: 3rem;
+        margin-left: 20rem;
+        width: 40rem;
+    }
 }

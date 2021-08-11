@@ -36,3 +36,22 @@
     background-color: wheat;
     border-color: white;
 }
+
+@media (max-width: 40rem) {
+    .section{
+        max-width: 1250px;
+        width: 1200px;
+        margin: 40px 20px 20px 20px;
+    }
+
+    .section h1{
+        font-size: 5rem;
+    }
+
+    .section button{
+        font-size: 3rem;
+        height: 6rem;
+        width: 30rem;
+        margin: 20px;
+    }
+}

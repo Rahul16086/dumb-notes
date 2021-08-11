@@ -1,4 +1,13 @@
+.sectionContainer{
+    display: flex;
+    width: 100vw;
+}
+
 .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 3rem auto;
     width: 95%;
     max-width: 25rem;
@@ -30,6 +39,10 @@
     background-color: #014b4b;
     border-color: white;
 }
+.statsContainer{
+    display: flex;
+    width: 100vw;
+}
 
 .stats{
     margin: 3rem auto;
@@ -55,4 +68,43 @@
     text-align: left;
     font-size: 30px;
     font-family: "Dubai Light";
+}
+
+@media (max-width: 40em) {
+    .sectionContainer{
+        width: 1250px;
+    }
+    .section{
+        height: 30rem;
+        max-width: 1200px;
+        margin-left: 30px;
+    }
+
+    .section h1{
+        font-size: 4.5rem;
+        margin: 30px;
+    }
+
+    .section button{
+        font-size: 3rem;
+    }
+
+    .statsContainer{
+        width: 1250px;
+    }
+
+    .stats{
+        max-width: 1200px;
+        width: 1250px;
+        margin-left: 30px;
+        height: 20rem;
+    }
+
+    .stats h1{
+        font-size: 5rem;
+    }
+
+    .stats ul{
+        font-size: 3.5rem;
+    }
 }

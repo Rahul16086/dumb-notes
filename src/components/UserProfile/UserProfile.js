@@ -86,22 +86,26 @@ const UserProfile = () => {
     <>
       {loading && <LoadingSpinner />}
       {truthy && !loading && (
-        <section className={classes.section}>
-          <h1>Hey There! Wanna change password?</h1>
-          <button onClick={showPasswordChanger}>
-            {!show ? "Change Password" : "Hide Password Changer"}
-          </button>
-          {show && <PasswordChanger />}
-        </section>
+        <div className={classes.sectionContainer}>
+          <section className={classes.section}>
+            <h1>Hey There! Wanna change password?</h1>
+            <button onClick={showPasswordChanger}>
+              {!show ? "Change Password" : "Hide Password Changer"}
+            </button>
+            {show && <PasswordChanger />}
+          </section>
+        </div>
       )}
       {!loading && (
-        <section className={classes.stats}>
-          <h1>Profile stats</h1>
-          <ul>
-            <li>All Notes: {allData.length}</li>
-            <li>Favorite Notes: {favData.length}</li>
-          </ul>
-        </section>
+        <div className={classes.statsContainer}>
+          <section className={classes.stats}>
+            <h1>Profile stats</h1>
+            <ul>
+              <li>All Notes: {allData.length}</li>
+              <li>Favorite Notes: {favData.length}</li>
+            </ul>
+          </section>
+        </div>
       )}
     </>
   );

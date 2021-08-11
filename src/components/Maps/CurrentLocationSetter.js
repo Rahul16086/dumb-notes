@@ -128,7 +128,7 @@ const CurrentLocationSetter = (props) => {
   };
 
   return (
-    <section>
+    <section className={classes.location}>
       {!manual && !loading && (
         <div>
           <p>Latitude: {latitude}</p>

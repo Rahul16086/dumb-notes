@@ -12,3 +12,11 @@
     animation-name: example;
     animation-duration: 4s;
 }
+
+@media (min-width: 240px) and (max-width: 768px) {
+    .heading{
+        font-size: 5rem;
+        margin-left: 25rem;
+        width: 30rem;
+    }
+}

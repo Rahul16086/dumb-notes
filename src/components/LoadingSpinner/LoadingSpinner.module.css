@@ -65,3 +65,9 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 40rem) {
+    .loader{
+        margin-left: 35rem;
+    }
+}

@@ -111,29 +111,14 @@ const AllNotesMap = (props) => {
   return (
     <>
       {allData.length === 0 ? (
-        <h1
-          style={{
-            textAlign: "center",
-            fontFamily: "Dancing script",
-            fontSize: "50px",
-          }}
-        >
-          No notes available to show in map :(
-        </h1>
+        <div className={markerStyle.noNotes}>
+          <h1>No notes available to show in map :(</h1>
+        </div>
       ) : (
         <>
           <div>
-            <h1
-              style={{
-                textAlign: "center",
-                fontFamily: "Dancing script",
-                fontSize: "50px",
-                margin: 0,
-              }}
-            >
-              {title}
-            </h1>
-            <p style={{ textAlign: "center" }}>
+            <h1 className={markerStyle.heading}>{title}</h1>
+            <p className={markerStyle.note}>
               Click on the note to view the Title
             </p>
             {/*{noteTitle && (*/}
@@ -141,7 +126,7 @@ const AllNotesMap = (props) => {
             {/*)}*/}
           </div>
           <div className={markerStyle.map}>
-            <div ref={mapContainer} style={{ width: "90%", height: "80vh" }} />
+            <div ref={mapContainer} className={markerStyle.mapScale} />
           </div>
 
           {/*<div className={markerStyle.map}>*/}

@@ -7,12 +7,14 @@ const StartingPageAfterLogin = () => {
     name = "there";
   }
   return (
-    <section className={classes.starting}>
-      <h1>Hello {name}!</h1>
-      <Link to={"/addnewnote"}>
-        <button>Add new note</button>
-      </Link>
-    </section>
+    <div className={classes.sectionContainer}>
+      <section className={classes.starting}>
+        <h1>Hello {name}!</h1>
+        <Link to={"/addnewnote"}>
+          <button>Add new note</button>
+        </Link>
+      </section>
+    </div>
   );
 };
 

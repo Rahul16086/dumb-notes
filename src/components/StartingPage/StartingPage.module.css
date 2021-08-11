@@ -1,6 +1,12 @@
+.sectionContainer{
+    max-width: 100vw;
+    display: flex;
+}
 .starting {
-    margin: 3rem auto;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /*margin: 3rem auto;*/
+    /*text-align: center;*/
 }
 
 .starting h1 {
@@ -25,4 +31,28 @@
     background-color: teal;
     border-color: white;
     color: white;
+}
+
+@media (max-width: 40rem) {
+    .sectionContainer{
+        max-width: 1250px;
+        width: 1250px;
+        margin: 15rem 10px 10px 10px;
+    }
+
+    .starting{
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .starting h1{
+        font-size: 2rem;
+        object-fit: contain;
+    }
+
+    .starting button{
+        font-size: 2rem;
+        margin: 30px;
+    }
 }

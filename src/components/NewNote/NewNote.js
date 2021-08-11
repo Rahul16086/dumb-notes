@@ -102,34 +102,43 @@ const NewNote = () => {
   return (
     <>
       {error && <ErrorModal error={error} hideModal={errorHandler} />}
-      <section className={classes.section}>
-        <h1> New Note</h1>
-        <div className={classes.control}>
-          <label>Title</label>
-          <input id={"titleInput"} type={"text"} ref={titleInputRef} required />
-        </div>
-        <div className={classes.control}>
-          {empty && <p style={{ color: "red" }}>Please enter some note!!!</p>}
-          <label>Note here</label>
-          <textarea id={"noteInput"} ref={noteInputRef} />
-        </div>
-        {locationAdded && (
-          <div>
-            <p style={{ fontWeight: "bold" }}>Location added successfully!</p>
-            <p>Latitude: {noteLocation.latitude}</p>
-            <p>Longitude: {noteLocation.longitude}</p>
-            <p>Address: {noteLocation.address}</p>
+      <div className={classes.sectionContainer}>
+        <section className={classes.section}>
+          <h1> New Note</h1>
+          <div className={classes.control}>
+            <label>Title</label>
+            <input
+              id={"titleInput"}
+              type={"text"}
+              ref={titleInputRef}
+              required
+            />
           </div>
-        )}
-        <div className={classes.actions}>
-          <button onClick={addNoteHandler}>Add Note</button>
-          <button onClick={clearTextHandler}>Clear Current Note</button>
-          <button onClick={showLocationToggler}>
-            {showLocation ? btn : "Hide"}
-          </button>
-        </div>
-        {!showLocation && <CurrentLocationSetter locationAdder={addLocation} />}
-      </section>
+          <div className={classes.control}>
+            {empty && <p style={{ color: "red" }}>Please enter some note!!!</p>}
+            <label>Note here</label>
+            <textarea id={"noteInput"} ref={noteInputRef} />
+          </div>
+          {locationAdded && (
+            <div>
+              <p style={{ fontWeight: "bold" }}>Location added successfully!</p>
+              <p>Latitude: {noteLocation.latitude}</p>
+              <p>Longitude: {noteLocation.longitude}</p>
+              <p>Address: {noteLocation.address}</p>
+            </div>
+          )}
+          <div className={classes.actions}>
+            <button onClick={addNoteHandler}>Add Note</button>
+            <button onClick={clearTextHandler}>Clear Current Note</button>
+            <button onClick={showLocationToggler}>
+              {showLocation ? btn : "Hide"}
+            </button>
+          </div>
+          {!showLocation && (
+            <CurrentLocationSetter locationAdder={addLocation} />
+          )}
+        </section>
+      </div>
 
       {isLoading && (
         <p style={{ textAlign: "center" }}>Saving to database....</p>

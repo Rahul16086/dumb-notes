@@ -77,6 +77,7 @@ const NoteMapDisplay = () => {
     });
     setShowAllMap(false);
   };
+
   return (
     <>
       <div className={classes.blur} />

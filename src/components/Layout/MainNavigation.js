@@ -14,12 +14,15 @@ const MainNavigation = () => {
   return (
     <>
       <header className={classes.header}>
-        <div className={classes.logoLink}>
-          <Link to={"/"}>
-            {/*<div className={classes.logo}>Dumb Notes</div>*/}
-            Dumb Notes
-          </Link>
+        <div className={classes.leftSideContainer}>
+          <div className={classes.logoLink}>
+            <Link to={"/"}>
+              {/*<div className={classes.logo}>Dumb Notes</div>*/}
+              Dumb Notes
+            </Link>
+          </div>
         </div>
+
         <div className={classes.rightSideContainer}>
           <ul>
             {isLoggedIn && (
