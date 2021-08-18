@@ -1,7 +1,8 @@
 import classes from "./MainNavigation.module.css";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AuthContext from "../../store/auth-context";
+import Hamburger from "hamburger-react";
 
 const MainNavigation = () => {
   const authCtx = useContext(AuthContext);
@@ -10,7 +11,16 @@ const MainNavigation = () => {
 
   const logoutHandler = () => {
     authCtx.logout();
+    setHamClicked(() => !hamClicked);
   };
+
+  const [hamClicked, setHamClicked] = useState(false);
+
+  const hamClickHandler = () => {
+    setHamClicked(() => !hamClicked);
+  };
+
+  console.log(hamClicked);
   return (
     <>
       <header className={classes.header}>
@@ -24,7 +34,13 @@ const MainNavigation = () => {
         </div>
 
         <div className={classes.rightSideContainer}>
-          <ul>
+          {isLoggedIn && (
+            <div className={classes.hamContainer}>
+              <Hamburger toggled={hamClicked} toggle={setHamClicked} />
+            </div>
+          )}
+
+          <ul className={classes.ulStyle}>
             {isLoggedIn && (
               <Link to={"/profile"}>
                 <li>My Profile</li>
@@ -54,6 +70,38 @@ const MainNavigation = () => {
           </ul>
         </div>
       </header>
+      {hamClicked && (
+        <div className={classes.menuContainer}>
+          <ul className={classes.ulStyleMobile}>
+            {isLoggedIn && (
+              <Link to={"/profile"}>
+                <li onClick={hamClickHandler}>My Profile</li>
+              </Link>
+            )}
+            {isLoggedIn && (
+              <Link to={"/notemap"}>
+                <li onClick={hamClickHandler}>View Note Map</li>
+              </Link>
+            )}
+            {isLoggedIn && (
+              <Link to={"/all"}>
+                <li onClick={hamClickHandler}>All Notes</li>
+              </Link>
+            )}
+
+            {isLoggedIn && (
+              <Link to={"/favorites"}>
+                <li onClick={hamClickHandler}>Favorites</li>
+              </Link>
+            )}
+            {isLoggedIn && (
+              <li>
+                <button onClick={logoutHandler}>Logout</button>
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
     </>
   );
 };

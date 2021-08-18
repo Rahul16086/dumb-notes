@@ -110,65 +110,70 @@ const AuthForm = () => {
   return (
     <>
       {error && <ErrorModal error={error} hideModal={errorHandler} />}
-      <section className={classes.auth}>
-        <h1>{!isLoggedIn ? "Login" : "Sign Up"}</h1>
-        <form>
-          {!isLoading && isLoggedIn && (
-            <div className={classes.control}>
-              <label>Username</label>
-              <input type={"text"} required ref={userNameInputRef} />
+      <div className={classes.mainContainer}>
+        <div className={classes.auth}>
+          <div className={classes.container}>
+            <h1>{!isLoggedIn ? "Login" : "Sign Up"}</h1>
+            <form>
+              {!isLoading && isLoggedIn && (
+                <div className={classes.control}>
+                  <label>Username</label>
+                  <input type={"text"} required ref={userNameInputRef} />
+                </div>
+              )}
+              <div className={classes.control}>
+                <label>Email</label>
+                <input type={"text"} required ref={emailInputRef} />
+              </div>
+              <div className={classes.control}>
+                <label>Password</label>
+                <input type={"password"} required ref={passwordInputRef} />
+              </div>
+              <div className={classes.actions}>
+                {!isLoading && !isLoggedIn && (
+                  <button onClick={signInHandler}>Login</button>
+                )}
+                {!isLoading && isLoggedIn && (
+                  <button onClick={signUpHandler}>Sign Up</button>
+                )}
+                {isLoading && <p>Sending request, wait....</p>}
+                <button
+                  type="button"
+                  className={classes.toggle}
+                  onClick={loginStateChanger}
+                >
+                  {!isLoggedIn
+                    ? "Create new account"
+                    : "Login with existing account"}
+                </button>
+                {success && isLoggedIn && (
+                  <p>
+                    SignUp success. A verification link has been sent to your
+                    email, please verify and login :)
+                  </p>
+                )}
+              </div>
+            </form>
+            {!isLoggedIn && (
+              <Link to={"/forgotpassword"}>
+                <button className={classes.forgotbutton}>
+                  Forgot Password
+                </button>
+              </Link>
+            )}
+            <div className={classes.actions}>
+              <Link to={"/login/phone"}>
+                <button>Sign In using Phone</button>
+              </Link>
+              <h1 className={classes.ortext}>Or</h1>
             </div>
-          )}
-          <div className={classes.control}>
-            <label>Email</label>
-            <input type={"text"} required ref={emailInputRef} />
-          </div>
-          <div className={classes.control}>
-            <label>Password</label>
-            <input type={"password"} required ref={passwordInputRef} />
-          </div>
-          <div className={classes.actions}>
-            {!isLoading && !isLoggedIn && (
-              <button onClick={signInHandler}>Login</button>
-            )}
-            {!isLoading && isLoggedIn && (
-              <button onClick={signUpHandler}>Sign Up</button>
-            )}
-            {isLoading && <p>Sending request, wait....</p>}
-            <button
-              type="button"
-              className={classes.toggle}
-              onClick={loginStateChanger}
-            >
-              {!isLoggedIn
-                ? "Create new account"
-                : "Login with existing account"}
-            </button>
-            {success && isLoggedIn && (
-              <p>
-                SignUp success. A verification link has been sent to your email,
-                please verify and login :)
-              </p>
-            )}
-          </div>
-        </form>
-        {!isLoggedIn && (
-          <Link to={"/forgotpassword"}>
-            <button className={classes.forgotbutton}>Forgot Password</button>
-          </Link>
-        )}
-        <div className={classes.actions}>
-          <Link to={"/login/phone"}>
-            <button>Sign In using Phone</button>
-          </Link>
-        </div>
 
-        <h1 className={classes.ortext}>Or</h1>
-
-        <div className={classes.actions}>
-          <GoogleButton onClick={() => googleSignIn(googleProvider)} />
+            <div className={classes.actions}>
+              <GoogleButton onClick={() => googleSignIn(googleProvider)} />
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

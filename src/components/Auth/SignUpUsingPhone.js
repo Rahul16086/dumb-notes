@@ -95,25 +95,31 @@ const SignUpUsingPhone = () => {
 
   return (
     <>
-      {loading && <LoadingSpinner />}
-      <section className={classes.auth}>
-        <h1>SignIn with your Phone</h1>
-        <form>
-          <div className={classes.control}>
-            <label>Enter your Phone Number(IN only)</label>
-            <input type={"text"} ref={phoneInputRef} />
+      <div className={classes.mainContainer}>
+        {loading && <LoadingSpinner />}
+        <div className={classes.auth}>
+          <div className={classes.container}>
+            <h1>SignIn with your Phone</h1>
+            <form>
+              <div className={classes.control}>
+                <label>Enter your Phone Number(IN only)</label>
+                <input type={"text"} ref={phoneInputRef} />
+              </div>
+              <div className={classes.actions}>
+                <button onClick={onSignInSubmit}>Sign In</button>
+                <Link to={"/login"}>
+                  <button style={{ marginTop: "10px" }}>Back to login</button>
+                </Link>
+              </div>
+              <div id={"captchaContainer"}></div>
+            </form>
+            {error && <ErrorModal error={error} hideModal={hideError} />}
+            {otpSent && (
+              <OtpPrompt received={otpReceived} hideModal={hidePrompt} />
+            )}
           </div>
-          <div className={classes.actions}>
-            <button onClick={onSignInSubmit}>Sign In</button>
-            <Link to={"/login"}>
-              <button style={{ marginTop: "10px" }}>Back to login</button>
-            </Link>
-          </div>
-          <div id={"captchaContainer"}></div>
-        </form>
-        {error && <ErrorModal error={error} hideModal={hideError} />}
-        {otpSent && <OtpPrompt received={otpReceived} hideModal={hidePrompt} />}
-      </section>
+        </div>
+      </div>
     </>
   );
 };

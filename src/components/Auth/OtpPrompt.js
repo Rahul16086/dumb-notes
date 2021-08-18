@@ -11,16 +11,18 @@ const OtpPrompt = (props) => {
   return (
     <>
       <div className={classes.backdrop} />
-      <section className={classes.errorsection}>
-        <h1 style={{ color: "black", marginBottom: "10px" }}>Enter OTP</h1>
-        <div className={classes.div}>
-          <input type={"text"} ref={otpRef} />
+      <div className={classes.container}>
+        <div className={classes.errorsection}>
+          <h1 style={{ color: "black", marginBottom: "10px" }}>Enter OTP</h1>
+          <div className={classes.div}>
+            <input type={"text"} ref={otpRef} />
+          </div>
+          <div className={classes.div}>
+            <button onClick={sendOtp}>Submit</button>
+            <button onClick={props.hideModal}>Cancel</button>
+          </div>
         </div>
-        <div className={classes.div}>
-          <button onClick={sendOtp}>Submit</button>
-          <button onClick={props.hideModal}>Cancel</button>
-        </div>
-      </section>
+      </div>
     </>
   );
 };
