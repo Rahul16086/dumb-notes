@@ -110,6 +110,7 @@
     }
 
     .leftSideContainer{
+        width: 100vw;
     }
 
     .logoLink{
@@ -126,8 +127,7 @@
     }
 
     .rightSideContainer{
-        width: 100vw;
-        padding-right: 0;
+        display: none;
     }
 
     .hamContainer{
