@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3rem auto;
+    margin: 8rem auto;
     width: 95%;
     max-width: 25rem;
     border-radius: 6px;
@@ -19,6 +19,7 @@
     text-align: center;
     font-family: "Dancing Script";
     color: black;
+    margin: 10px;
 }
 
 .section button {

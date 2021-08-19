@@ -30,15 +30,14 @@ const MainNavigation = () => {
               Dumb Notes
             </Link>
           </div>
-        </div>
-
-        <div className={classes.rightSideContainer}>
           {isLoggedIn && (
             <div className={classes.hamContainer}>
               <Hamburger toggled={hamClicked} toggle={setHamClicked} />
             </div>
           )}
+        </div>
 
+        <div className={classes.rightSideContainer}>
           <ul className={classes.ulStyle}>
             {isLoggedIn && (
               <Link to={"/profile"}>
@@ -68,39 +67,39 @@ const MainNavigation = () => {
             )}
           </ul>
         </div>
-      </header>
-      {hamClicked && (
-        <div className={classes.menuContainer}>
-          <ul className={classes.ulStyleMobile}>
-            {isLoggedIn && (
-              <Link to={"/profile"}>
-                <li onClick={hamClickHandler}>My Profile</li>
-              </Link>
-            )}
-            {isLoggedIn && (
-              <Link to={"/notemap"}>
-                <li onClick={hamClickHandler}>View Note Map</li>
-              </Link>
-            )}
-            {isLoggedIn && (
-              <Link to={"/all"}>
-                <li onClick={hamClickHandler}>All Notes</li>
-              </Link>
-            )}
+        {hamClicked && (
+          <div className={classes.menuContainer}>
+            <ul className={classes.ulStyleMobile}>
+              {isLoggedIn && (
+                <Link to={"/profile"}>
+                  <li onClick={hamClickHandler}>My Profile</li>
+                </Link>
+              )}
+              {isLoggedIn && (
+                <Link to={"/notemap"}>
+                  <li onClick={hamClickHandler}>View Note Map</li>
+                </Link>
+              )}
+              {isLoggedIn && (
+                <Link to={"/all"}>
+                  <li onClick={hamClickHandler}>All Notes</li>
+                </Link>
+              )}
 
-            {isLoggedIn && (
-              <Link to={"/favorites"}>
-                <li onClick={hamClickHandler}>Favorites</li>
-              </Link>
-            )}
-            {isLoggedIn && (
-              <li>
-                <button onClick={logoutHandler}>Logout</button>
-              </li>
-            )}
-          </ul>
-        </div>
-      )}
+              {isLoggedIn && (
+                <Link to={"/favorites"}>
+                  <li onClick={hamClickHandler}>Favorites</li>
+                </Link>
+              )}
+              {isLoggedIn && (
+                <li>
+                  <button onClick={logoutHandler}>Logout</button>
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
+      </header>
     </>
   );
 };
