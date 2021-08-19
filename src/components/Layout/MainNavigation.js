@@ -20,7 +20,6 @@ const MainNavigation = () => {
     setHamClicked(() => !hamClicked);
   };
 
-  console.log(hamClicked);
   return (
     <>
       <header className={classes.header}>

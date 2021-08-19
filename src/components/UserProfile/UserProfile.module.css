@@ -72,39 +72,36 @@
 
 @media (max-width: 40em) {
     .sectionContainer{
-        width: 1250px;
+        width: 100vw;
     }
+
     .section{
-        height: 30rem;
-        max-width: 1200px;
-        margin-left: 30px;
+        width: 80vw;
     }
 
     .section h1{
-        font-size: 4.5rem;
-        margin: 30px;
+        font-size: 2rem;
+        margin: 10px 10px 20px 10px;
     }
 
     .section button{
-        font-size: 3rem;
+        font-size: 1rem;
+        padding: 10px;
     }
 
     .statsContainer{
-        width: 1250px;
+        width: 100vw;
     }
 
     .stats{
-        max-width: 1200px;
-        width: 1250px;
-        margin-left: 30px;
-        height: 20rem;
+        width: 80vw;
     }
 
     .stats h1{
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
     .stats ul{
-        font-size: 3.5rem;
+        font-size: 1.5rem;
     }
 }

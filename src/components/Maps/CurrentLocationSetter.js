@@ -31,7 +31,6 @@ const CurrentLocationSetter = (props) => {
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
     setAddLocation(true);
-    console.log(position);
     if (position.coords.latitude || position.coords.longitude)
       reverseGeocode(position.coords.latitude, position.coords.longitude);
   };
@@ -46,7 +45,6 @@ const CurrentLocationSetter = (props) => {
       })
       .then((data) => {
         setLoading(false);
-        console.log(data);
         setAddress(data.results[0].formatted);
       })
       .catch((err) => {
@@ -104,7 +102,6 @@ const CurrentLocationSetter = (props) => {
           return res.json();
         })
         .then((data) => {
-          console.log(data);
           setLatitude(data.results[0].geometry.lat);
           setLongitude(data.results[0].geometry.lng);
           setAddress(data.results[0].formatted);

@@ -41,13 +41,11 @@ const SignUpUsingPhone = () => {
       phoneNumber = "+91" + phoneInputRef.current.value;
 
       const appVerifier = window.recaptchaVerifier;
-      console.log(phoneNumber);
 
       firebase
         .auth()
         .signInWithPhoneNumber(phoneNumber, appVerifier)
         .then((confirmationResult) => {
-          console.log(confirmationResult);
           window.confirmationResult = confirmationResult;
           setOtpSent(true);
           setConfirmationResultObject(confirmationResult);
@@ -62,7 +60,6 @@ const SignUpUsingPhone = () => {
   };
 
   const otpOnConfirm = (otpFromReceived) => {
-    console.log(otpFromReceived);
     confirmationResultObject
       .confirm(otpFromReceived)
       .then((result) => {
@@ -80,7 +77,6 @@ const SignUpUsingPhone = () => {
 
   const otpReceived = (otp) => {
     setOtpSent(false);
-    console.log(otp);
     otpOnConfirm(otp);
   };
 

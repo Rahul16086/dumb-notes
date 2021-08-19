@@ -91,7 +91,6 @@ const NewNote = () => {
     });
     setLocationAdded(true);
   };
-  console.log(showLocation);
   let btn = "";
   if (locationAdded) {
     btn = "Edit Location";

@@ -43,6 +43,9 @@ const AllNotesMap = (props) => {
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
+    if (allData.length === 0) {
+      return;
+    }
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/1rahul6/ckqaitpdh2a4u17u5ecps0kuh",
@@ -66,7 +69,7 @@ const AllNotesMap = (props) => {
     //         .addTo(map.current)
     //     );
 
-    allData.forEach((data) => {
+    allData?.forEach((data) => {
       //using mapboxgl.Marker
       const ref = React.createRef();
       ref.current = document.createElement("div");

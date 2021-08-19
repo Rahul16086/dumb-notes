@@ -83,7 +83,7 @@ const NoteMapDisplay = () => {
       <div className={classes.blur} />
       <div className={classes.section}>
         <h1>View your note map</h1>
-        <button style={{ marginRight: "10px" }} onClick={showAllMapToggle}>
+        <button onClick={showAllMapToggle}>
           {showAllMap ? "Hide All Notes Map" : "All Notes Map"}
         </button>
         <button onClick={showFavMapToggle}>

@@ -15,8 +15,6 @@
 
 @media (min-width: 240px) and (max-width: 768px) {
     .heading{
-        font-size: 5rem;
-        margin-left: 25rem;
-        width: 30rem;
+        font-size: 2rem;
     }
 }

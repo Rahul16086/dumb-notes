@@ -1,7 +1,7 @@
 .header {
     background-color: aquamarine;
-    width: 100%;
-    height: 90px;
+    width: 100vw;
+    height: 8vh;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-between;
@@ -9,11 +9,18 @@
     padding: 0;
     max-width: 100vw;
     margin: 0;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 .leftSideContainer{
     display: flex;
+    width: 50vw;
     height: 100%;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logoLink {
@@ -35,12 +42,11 @@
 }
 
 .rightSideContainer{
-    padding-right: 100px;
-    width: 60%;
+    width: 50vw;
     height: 100%;
     display: flex;
     align-items: center;
-    margin-right: 0;
+    justify-content: flex-end;
 }
 
 .header a{
@@ -51,9 +57,9 @@
 .ulStyle {
     list-style: none;
     margin: 0;
-    padding: 0 15%;
     display: flex;
     align-items: center;
+    float: right;
 }
 
 .ulStyle li {

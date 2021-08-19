@@ -8,12 +8,10 @@ const StartingPageAfterLogin = () => {
   }
   return (
     <div className={classes.sectionContainer}>
-      <section className={classes.starting}>
-        <h1>Hello {name}!</h1>
-        <Link to={"/addnewnote"}>
-          <button>Add new note</button>
-        </Link>
-      </section>
+      <h1>Hello {name}!</h1>
+      <Link to={"/addnewnote"}>
+        <button>Add new note</button>
+      </Link>
     </div>
   );
 };

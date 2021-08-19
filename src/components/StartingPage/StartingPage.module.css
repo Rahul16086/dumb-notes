@@ -1,12 +1,14 @@
 .sectionContainer{
     max-width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .loginButton{
     display: flex;
+
 }
 
 .sectionContainer h1 {
@@ -36,7 +38,6 @@
 
 @media (max-width: 40rem) {
     .sectionContainer{
-        max-width: 100vw;
         width: 100vw;
         align-items: center;
         justify-content: center;
@@ -46,9 +47,11 @@
     .sectionContainer h1{
         font-size: 2rem;
         font-family: "Dubai Light" , "Segoe Print";
+        margin-top: 15vh;
     }
 
     .sectionContainer button{
         font-size: 1.5rem;
+
     }
 }
